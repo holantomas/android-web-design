@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<title>Přehled elementů</title>
+	
+	<!-- Styly -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+   <link rel="stylesheet" type="text/css" href="css/jquery.selectbox.css">
+   <link type="text/css" href="css/jquery.jscrollpane.css" rel="stylesheet" media="all" >
+	
+	<!-- JavaScript -->
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script src="js/jquery-1.8-ui.min.js"></script>
+	<script src="js/jquery.mCustomScrollbar.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+        <script src="js/jquery.selectbox-0.2.js"></script>
+        <script type="text/javascript" src="js/jquery.jscrollpane.js"></script>
+  <script src="js/api.js"></script>
+  
+</head>
+<body>
+
+    <!-- Pozadí pro PopUp okna -->
+    <div class="background"></div>
+
+    <!-- Panel navigace -->
+    <div id="panel">
+    	<div id="navigation">
+    		<h2>Hlavní</h2>
+			<ul>
+				<li>
+					<a title="O Projektu" href="about.html">O Projektu</a>
+					<div class="cleaner"></div>
+				</li>
+				<li>
+					<a class="active"  href="index.html">Přehled elementů</a>
+					<div class="cleaner"></div>
+				</li>
+				<li>
+					<a href="changelog.html">ChangeLog</a>
+					<div class="cleaner"></div>
+				</li>
+			</ul>
+    	</div>
+    </div>
+    
+    <!-- Obsahová část -->
+    <div id="content">
+    
+      <!-- Obal obsahu -->
+    	<div id="content-wrapper">
+          
+
+          
+          <h2>Přehled elemenetů</h2>
+          
+          <h3>Select</h3>
+          <select>
+              <option value="prvni">Prvni</option>
+              <option value="druhy">Druhy</option>
+              <option value="treti">Třetí</option>
+          </select>
+		
+        <h3>CheckBox</h3>
+        
+        <input type="checkbox" id="unchecked"><label for="unchecked"><span></span>Default</label>
+        <input type="checkbox" id="checked" checked="checked"><label for="checked"><span></span>Checked</label>
+        <input type="checkbox" id="disabled" disabled><label for="disabled"><span></span>Disabled</label>
+        <input type="checkbox" id="disabled" checked="checked" disabled><label for="disabled"><span></span>Disabled-Checked</label>
+ 
+        <h3>Radio</h3>
+        
+        <input type="radio" name="test" id="radiounchecked"><label for="radiounchecked"><span></span>Default</label>
+        <input type="radio" name="test" id="radiochecked" checked="checked"><label for="radiochecked"><span></span>Checked</label>
+        <input type="radio" id="radiodisabled" disabled><label for="radiodisabled"><span></span>Disabled</label>
+        <input type="radio" id="radiodisabled" checked="checked" disabled><label for="radiodisabled"><span></span>Disabled-Checked</label>  
+        
+        <h3>Označený text</h3>
+        
+        <span class="selected">Lorem ipsum</span>
+        
+        <h3>Activity bar, Progress bar</h3>
+        
+        <h4>Activity bar</h4>
+        <div style="width: 330px;" class="activityBar"></div>
+        
+        <h4>Progress bar</h4>
+        <progress min="0" max="100" value="80">80%</progress>
+        
+        <h3>Text, Password, Email</h3>
+        
+        <h4>Abled</h4>
+        <input type="text" value="text" style="float:left; margin-right: 4px;">
+        <input type="password" value="password">
+        <input type="email" value="mail@tomasholan.eu">
+        
+        <h4>ReadOnly</h4>
+        <input type="text" value="text" style="float:left; margin-right: 4px;" readonly>
+        <input type="password" value="password" readonly>
+        <input type="email" value="mail@tomasholan.eu" readonly>
+        
+        <h4>Disabled</h4>
+        <input type="text" value="text" style="float:left; margin-right: 4px;" disabled>
+        <input type="password" value="password" disabled>
+        <input type="email" value="mail@tomasholan.eu" disabled>
+        
+        <h3>Submit, Button, Reset</h3>
+        
+        <h4>Abled</h4>
+        <input type="submit" value="Submit">
+        <input type="button" value="Button">
+        <input type="reset" value="Reset">
+        
+        <h4>Disabled</h4>
+        <input type="submit" value="Submit" disabled>
+        <input type="button" value="Button" disabled>
+        <input type="reset" value="Reset" disabled>
+        
+        <h4>Focused</h4>
+        <input class="buttonFocus" type="submit" value="Submit">
+        <input class="buttonFocus" type="button" value="Button">
+        <input class="buttonFocus" type="reset" value="Reset">
+        
+        <h4>Clicked/Actived</h4>
+        <input class="buttonActive" type="submit" value="Submit">
+        <input class="buttonActive" type="button" value="Button">
+        <input class="buttonActive" type="reset" value="Reset"> 
+        
+        <h3>FieldSet</h3>
+        <fieldset>
+          <legend>Fieldset</legend>
+          <input type="button" rel="popup-rq-1" value="Otevřít PopUp okno">
+        </fieldset>
+        
+        <div rel="popup-1" style="display: none; position: absolute;">
+          <input type="button" rel="popup-quit" value="Zavřít">
+        </div>  
+        
+        <h3>Seznamy</h3>
+        
+        <h4>Jednoduché</h4>
+        <ul>
+            <li>První položka</li>
+            <li>Druhá položka</li>
+            <li>Třetí položka</li>
+        </ul>
+        
+        <h4>Složené</h4>
+        <ul>
+            <li>První podseznam</li>
+            <li>
+                <ul>
+                   <li>První položka</li>
+                   <li>Druhá položka</li>
+                   <li>Třetí položka</li>
+               </ul>
+            </li>
+            <li>Druhý podseznam</li>
+            <li>
+                <ul>
+                   <li>První položka</li>
+                   <li>Druhá položka</li>
+                   <li>Třetí položka</li>
+               </ul>
+            </li>
+        </ul>
+		  </div>
+	 </div>	
+</body>
+</html>

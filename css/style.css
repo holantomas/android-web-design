@@ -1,0 +1,957 @@
+/* Elementy */
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background: white;
+    /*color: #5dafd3;*/
+    color: #333;
+    font-family: 'Roboto', Calibri, Arial, sans-serif; 
+}
+
+h2{
+    border-bottom: 2px #333 solid;
+}
+
+h5{
+    margin: 0px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+table{
+    font-size: 12px;
+    border-color: #5dafd3;
+    border-collapse: collapse;
+}  
+
+label{
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+input{
+    font-family: 'Roboto', Calibri, Arial, sans-serif;
+    /*outline: none;*/
+}
+
+/* Seznam */
+ul li{
+    list-style: none;
+    border-bottom: 3px solid #bababa;
+    color: #999;
+    font-weight: bold;
+    padding: 5px 0px 5px 5px;
+}
+ul ul{
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 5px;
+}
+ul li > ul li{
+    border-bottom: none;
+}
+ul li > ul li{
+    color: #3b3b3b;
+    padding: 10px;
+    border-bottom: 1px solid #d9d9d9;
+    font-weight: normal;    
+}
+
+/* Select */
+
+
+
+
+/* Testová pole */
+
+input[type=text], input[type=password], input[type=email]{
+    behavior:url(PIE.htc);
+    border-style: solid;
+    background: transparent;
+    border-width: 0px 1px 1px 1px;
+    border-color: #a9a9a9;
+    color: #a9a9a9;
+    padding:  0px 5px 5px 5px;
+    -moz-border-image: url('images/border.png') 27 fill repeat stretch;
+    -webkit-border-image: url('images/border.png') 27 fill repeat stretch;
+    -o-border-image: url('images/border.png') 27 repeat stretch;
+    border-image: url('images/border.png') 27 fill repeat stretch;  
+    margin: 5px 0px 3px 0px;
+    outline: none;
+}
+
+input[type=text][disabled], input[type=password][disabled], input[type=email][disabled]{
+    behavior: url(PIE.htc);
+    background: white;
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;
+    border-color: #cecece;
+    color: #cecece;
+    padding: 0px 5px 5px 5px;
+    -moz-border-image: url('images/border_disabled.png') 27 fill repeat stretch;
+    -webkit-border-image: url('images/border_disabled.png') 27 fill repeat stretch;
+    -o-border-image: url('images/border_disabled.png') 27 repeat stretch;
+    border-image: url('images/border_disabled.png') 27 fill repeat stretch;   
+    margin: 5px 0px 3px 0px;
+    outline: none;
+}
+
+input[type=text][readonly], input[type=password][readonly], input[type=email][readonly]{
+    behavior: url(PIE.htc);
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;
+    border-color: #cecece;
+    color: #000;
+    padding: 0px 5px 5px 5px;
+    -moz-border-image: url('images/border_disabled.png') 27 fill repeat stretch;
+    -webkit-border-image: url('images/border_disabled.png') 27 fill repeat stretch;
+    -o-border-image: url('images/border_disabled.png') 27 repeat stretch;
+    border-image: url('images/border_disabled.png') 27 fill repeat stretch;    
+    margin: 5px 0px 3px 0px;
+    outline: none;
+    cursor: text;
+}
+
+input[type=text][readonly]:focus, input[type=password][readonly]:focus, input[type=email][readonly]:focus{
+    behavior: url(PIE.htc);
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;
+    border-color: #cecece;
+    color: #000;
+    padding: 0px 5px 5px 5px;
+    -moz-border-image: url('images/border_disabled.png') 27 fill repeat stretch;
+    -webkit-border-image: url('images/border_disabled.png') 27 fill repeat stretch;
+    -o-border-image: url('images/border_disabled.png') 27 repeat stretch;
+    border-image: url('images/border_disabled.png') 27 fill repeat stretch;   
+    margin: 5px 0px 3px 0px;
+    outline: none;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus{
+    behavior: url(PIE.htc);
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;
+    border-color: #0099CC;
+    color: #000;
+    padding: 0px 5px 5px 5px;
+    -moz-border-image: url('images/border_focused.png') 27 fill repeat stretch;
+    -webkit-border-image: url('images/border_focused.png') 27 fill repeat stretch;
+    -o-border-image: url('images/border_focused.png') 27 repeat stretch;
+    border-image: url('images/border_focused.png') 27 fill repeat stretch;   
+    margin: 5px 0px 3px 0px;
+    outline: none;
+}
+
+::selection{
+    color: #3b4346;
+    background-color: #92d3eb;
+}
+
+.selected{
+    color: #3b4346;
+    background-color: #92d3eb
+}
+
+::-moz-selection{
+    color: black;
+    background-color: #92d3eb;
+}
+
+.radio_ok{
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    border-top: 1px #5dafd3 solid;
+    font-size: 20px; 
+    cursor: pointer;       
+}
+
+/* Checkbox */
+input[type=checkbox]{
+    display: none;
+}
+
+input[type=checkbox] + label{
+    display: inline-block;
+    height: 22px;
+    vertical-align: bottom;
+}
+
+input[type=checkbox] + label::selection{
+    background: transparent;
+    color: #0099CC;
+}
+
+input[type=checkbox] + label span{
+    display: inline-block;
+    width: 25px;
+    height: 22px;
+    background: url('images/checkbox_unchecked.png') left top no-repeat;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+input[type=checkbox]:checked + label span{
+    background: url('images/checkbox_checked.png') left top no-repeat;
+}
+
+input[type=checkbox][disabled] + label span{
+    background: url('images/checkbox_disabled.png') left top no-repeat;
+    cursor: default;
+}
+input[type=checkbox][disabled] + label{
+    color: #cecece;
+    cursor: default;
+}
+
+input[type=checkbox][disabled]:checked + label span{
+    background: url('images/checkbox_checked_disabled.png') left top no-repeat;
+}
+
+
+/* Radio */
+input[type=radio]{
+    display: none;
+}
+
+input[type=radio] + label{
+    display: inline-block;
+    height: 18px;
+    vertical-align: bottom;
+}
+
+input[type=radio] + label::selection{
+    background: transparent;
+    color: #0099CC;
+}
+
+input[type=radio] + label span{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    background: url('images/radio_unchecked.png') left top no-repeat;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+input[type=radio]:checked + label span{
+    background: url('images/radio_checked.png') left top no-repeat;
+}
+
+input[type=radio][disabled] + label span{
+    background: url('images/radio_disabled.png') left top no-repeat;
+    cursor: default;
+}
+input[type=radio][disabled] + label{
+    color: #cecece;
+    cursor: default;
+}
+
+input[type=radio][disabled]:checked + label span{
+    background: url('images/radio_checked_disabled.png') left top no-repeat;
+}
+
+/* Tla��tka */
+
+input[type=submit], input[type=button], input[type=reset]{	
+    background: #cecece;
+    color: black;
+    font-size: 12px;
+    padding: 2px 60px;
+    margin: 0px;
+    border: 0px;
+    font-weight: normal;
+    cursor: pointer;
+    height: 30px;
+    overflow: visible;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow:    0px 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow:         0px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+input[type=submit]:focus, input[type=button]:focus, input[type=reset]:focus, .buttonFocus+.buttonFocus, h4+.buttonFocus{
+    padding: 0px 58px;
+    border: 2px solid #59bbdc;
+    background: #a6daed;
+    outline: none;
+}
+
+input[type=submit]:active, input[type=button]:active, input[type=reset]:active, .buttonActive{	
+    background: #59c1e8;
+    outline: 4px solid rgba(51, 181, 229, 0.4);
+    outline-offset: -1px;
+    -moz-outline-radius: 4px;
+}
+
+input[type=submit][disabled], input[type=button][disabled], input[type=reset][disabled]{
+    background: #e7e7e7;
+    color: #bbbbbb;
+    padding: 1px 59px;
+    margin: 0px;
+    border: 1px solid #cccccc;
+    font-weight: normal;
+    height: 30px;
+    overflow: visible;
+    cursor: auto;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow:    none;
+    box-shadow:	none;
+}
+
+input[type=submit][disabled]:active, input[type=button][disabled]:active, input[type=reset][disabled]:active{
+    background: #e7e7e7;
+    outline: none;
+    outline-offset: 0px;
+    cursor: auto;
+    -moz-outline-radius: 0px;
+}
+/*.jspVerticalBar
+{
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 10px;
+  height: 98%;
+        margin: 1% 0 1% 0;
+  background: transparent;
+}
+
+.jspVerticalBar .jspDrag{
+        width: 5px;
+        left: -2px;
+}
+.jspVerticalBar .jspTrack{
+        width: 1px;
+        max-height: 98%;
+        background:#dbdbdb;
+        -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:10px;
+}
+
+.jspHorizontalBar
+{
+  position: absolute;
+   border: none;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: transparent;
+}
+
+.jspHorizontalBar .jspDrag{
+        height: 5px;
+        top: -2px;
+}
+.jspHorizontalBar .jspTrack{
+        height: 1px;
+        background:#dbdbdb;
+        -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:10px;
+}*/
+fieldset{
+    border: none;
+    position: relative;
+    border-top: 1px solid  #0099CC; 
+    margin-top: 30px;
+}
+fieldset legend{
+    display: block;
+    font-family: 'Roboto';
+    font-weight: 700;
+    position: absolute;
+    top: -25px;
+    left: 10px;
+    color: #0099CC;
+}
+
+.icon{
+    background: none;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.info{
+    color: #696969;
+    font-weight: bold;
+    display: inline-block;
+    width: 24px;
+    text-align: center;
+    border: 2px solid #696969;
+    -webkit-border-radius: 1000px;
+    -moz-border-radius: 1000px;
+    border-radius: 1000px;
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.cleaner{
+    clear:both;
+    height: 0;
+    overflow: hidden;
+}
+
+
+/* Activity bar */
+
+.activityBar{
+    height: 4px;
+    overflow: hidden; 
+    margin: 0px;
+    padding: 0px;
+
+}
+.activityBarWrap{
+    height: 4px;
+    width: 440px;
+    overflow: hidden;            
+}
+.activityBarLine{
+    float: left;
+    background: #0099CC;
+    width: 100px;
+    height: 2px;
+    margin: 1px 5px 0px 0px;
+    position: relative;
+    right: 105px;
+    -webkit-box-shadow: 0px 0px 2px rgb(0, 153, 204);
+    -moz-box-shadow:    0px 0px 2px rgb(0, 153, 204);
+    box-shadow:         0px 0px 2px rgb(0, 153, 204);
+}
+
+
+/* Progress Bar */
+progress
+{
+
+    /* Turns off styling - not usually needed, but good to know. */
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    /* gets rid of default border in Firefox and Opera. */ 
+    border: none;
+
+    /* Needs to be in here for Safari polyfill so background images work as expected. */
+    background-size: auto;
+
+    /* Dimensions */
+    width: 330px;
+    height: 2px;
+
+}
+
+/* Firefox, Opera */
+progress { 
+    background: #a6a6a6 !important; 
+}
+
+/* Chrome */
+progress::-webkit-progress-bar {
+    background: #a6a6a6;
+}
+
+/* IE10 */
+progress {
+    color: #0099CC;
+}
+
+/* Firefox */
+progress::-moz-progress-bar { 
+    background: #0099CC;
+    -webkit-box-shadow: 0px 0px 2px rgb(0, 153, 204);
+    -moz-box-shadow:    0px 0px 2px rgb(0, 153, 204);
+    box-shadow:         0px 0px 2px rgb(0, 153, 204);
+}
+
+/* Chrome */
+progress::-webkit-progress-value {
+    background: #0099CC;
+    -webkit-box-shadow: 0px 0px 2px rgb(0, 153, 204);
+    -moz-box-shadow:    0px 0px 2px rgb(0, 153, 204);
+    box-shadow:         0px 0px 2px rgb(0, 153, 204);
+}
+
+/* Opera */
+progress::-o-progress-value {
+    background: #0099CC !important;
+    -webkit-box-shadow: 0px 0px 2px rgb(0, 153, 204);
+    -moz-box-shadow:    0px 0px 2px rgb(0, 153, 204);
+    box-shadow:         0px 0px 2px rgb(0, 153, 204);
+}
+
+.failMsg{
+    display: none;
+    width: 100%;
+    position: fixed;
+    padding: 5px 30px;
+    background: #ffff90;
+    text-align: center;
+    z-index: 1000;
+    margin: 0px;        
+}
+
+.infoMsg{
+    display: none;
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    z-index: 15;
+    background: #696969;
+    /* Generated from www.border-radius.com */
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    /* Generated from www.css3gen.com */
+    -webkit-box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow:    0px 0px 14px rgba(0, 0, 0, 0.4);
+    box-shadow:         0px 0px 14px rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 12px;
+    padding: 5px;
+    margin: 0px;
+
+}
+
+.infoMsg p{
+    margin: 0px;
+    padding: 0px;         
+}
+
+
+.background{
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    z-index: 1;
+    width: 100%;
+    height: 100%;         
+}
+
+/* P�ihla�ovac� obrazovka */
+#login{
+    display: block;
+    padding: 0px 5px;
+    position: absolute;
+    width: 204px;
+    height: 226px;
+    margin: -113px 0px 0px -107px; 
+    top: 50%;
+    left: 50%;
+}
+
+#login hr{
+    width: 100%;
+    border: none;
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+    height: 2px;
+    background: #696969;
+}
+
+
+
+#login input[type=text], #login input[type=password]{
+    width: 190px;            
+}
+
+#login input[type=submit]{
+    width: 202px;                         
+}
+
+#login table{
+    width: 100%;
+}
+
+#login .sumbmit{
+    padding: 10px 10px;
+}
+
+#login #odpoved{
+    text-align:center;
+}
+
+#container{
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow: auto;
+}
+
+/* Lev� panel */
+
+#panel{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 20%;
+    background: #eee;
+    overflow:auto;
+    outline: none;
+    -webkit-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow:   inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+    box-shadow:        inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#navigation{
+    width: 95%;
+    margin: 0% 0% 2% 0%;
+    float: right;
+}
+
+#navigation a{
+    display: inline-block;
+    text-decoration: none; 
+    color: #222;
+    width: 97%;
+    float: right; 
+    padding: 0 0 0 3%;
+    font-size: 14px;
+}
+
+#navigation h2{
+    margin: 25px 0px 3px 0px; 
+    padding: 0 0 1% 3%;
+    font-size: 14px;
+    color: #999999;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    border-color: #bababa;
+}
+
+#navigation ul{
+    padding: 0px;
+    margin: 0px;  
+}
+
+#navigation li{
+    list-style: none;
+    border-bottom: 1px #d9d9d9 solid;
+    line-height: 40px;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    font-weight: normal;
+}
+
+#navigation .active, #navigation .active:focus, #navigation .active:hover{
+    background: url('images/active.png') right center no-repeat #59c1e8;
+} 
+#navigation li:hover{
+    background: #59c1e8;
+}
+
+#navigation li a:focus{
+    background: #b8e0ee;
+    outline: 2px solid #7fcdea;
+    outline-offset: -2%;
+}
+
+#navigation li:active, #navigation li:active a{
+    background: #7fcdea;
+}
+
+
+
+/* Obsahov� ��st */
+
+#content{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 20%;
+    padding: 0%;
+    overflow: auto;
+    outline: none;
+}
+
+#content-wrapper{
+    margin: 2%;
+}
+
+/* basic scrollbar styling */
+/* vertical scrollbar */
+.mCSB_container{
+    width:auto;
+    margin-right:0px;
+    overflow:hidden;
+}
+.mCSB_container.mCS_no_scrollbar{
+    margin-right:0;
+}
+.mCS_disabled .mCSB_container.mCS_no_scrollbar,
+.mCS_destroyed .mCSB_container.mCS_no_scrollbar{
+    margin-right: 0px;
+}
+
+.mCustomScrollBox .mCSB_scrollTools{
+    width:16px;
+    height:96%;
+    top:0;
+    right:0;
+    left: auto;
+    bottom: auto;
+}
+
+._mCS_2 .mCustomScrollBox .mCSB_scrollTools{
+    width:16px;
+    height:96%;
+    top:0;
+    right: -16px;
+}
+
+._mCS_1 .mCustomScrollBox .mCSB_scrollTools{
+    width:16px;
+    height:96%;
+    top:0;
+    left: -16px;
+}
+
+.mCSB_scrollTools{
+    margin: 2% 0px;	
+}
+.mCSB_scrollTools .mCSB_draggerContainer{
+    height:100%;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.mCSB_scrollTools .mCSB_buttonUp+.mCSB_draggerContainer{
+    padding-bottom:40px;
+}
+.mCSB_scrollTools .mCSB_draggerRail{
+    width:1px;
+    height:100%;
+    margin:0 auto;
+    cursor: pointer;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+}
+.mCSB_scrollTools .mCSB_dragger{
+    cursor:pointer;
+    width:100%;
+    height:30px;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    width:5px;
+    height: 100%;
+    margin:0 auto;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    text-align:center;
+}
+.mCSB_scrollTools .mCSB_buttonUp,
+.mCSB_scrollTools .mCSB_buttonDown{
+    height:20px;
+    overflow:hidden;
+    margin:0 auto;
+    cursor:pointer;
+}
+.mCSB_scrollTools .mCSB_buttonDown{
+    bottom:0;
+    margin-top:-40px;
+}
+/* horizontal scrollbar */
+.mCSB_horizontal .mCSB_container{
+    height:auto;
+    margin-right:0;
+    margin-bottom:30px;
+    overflow:hidden;
+}
+.mCSB_horizontal .mCSB_container.mCS_no_scrollbar{
+    margin-bottom:0;
+}
+.mCS_disabled .mCSB_horizontal .mCSB_container.mCS_no_scrollbar,
+.mCS_destroyed .mCSB_horizontal .mCSB_container.mCS_no_scrollbar{
+    margin-right:0;
+    margin-bottom:30px;
+}
+.mCSB_horizontal.mCustomScrollBox .mCSB_scrollTools{
+    width:100%;
+    height:16px;
+    top:auto;
+    bottom:0;
+    overflow:hidden;
+}
+.mCSB_horizontal .mCSB_scrollTools .mCSB_draggerContainer{
+    height:100%;
+    width:auto;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    overflow:hidden;
+}
+.mCSB_horizontal .mCSB_scrollTools .mCSB_buttonLeft+.mCSB_draggerContainer{
+    padding-bottom:0;
+    padding-right:20px;
+}
+.mCSB_horizontal .mCSB_scrollTools .mCSB_draggerRail{
+    width:100%;
+    height:2px;
+    margin:7px 0;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+}
+.mCSB_horizontal .mCSB_scrollTools .mCSB_dragger{
+    width:30px;
+    height:100%;
+}
+.mCSB_horizontal .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    width:100%;
+    height:4px;
+    margin:6px auto;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+}
+.mCSB_horizontal .mCSB_scrollTools .mCSB_buttonLeft,
+.mCSB_horizontal .mCSB_scrollTools .mCSB_buttonRight{
+    width:20px;
+    height:100%;
+    overflow:hidden;
+    margin:0 auto;
+    cursor:pointer;
+    float:left;
+}
+.mCSB_horizontal .mCSB_scrollTools .mCSB_buttonRight{
+    right:0;
+    bottom:auto;
+    margin-left:-40px;
+    margin-top:-16px;
+    float:right;
+}
+
+/* default scrollbar colors and backgrounds */
+.mCustomScrollBox .mCSB_scrollTools{
+    opacity:0.75;
+}
+.mCustomScrollBox:hover .mCSB_scrollTools{
+    opacity:1;
+}
+.mCSB_scrollTools .mCSB_draggerRail{
+    background:#dbdbdb;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    background:#0099cc;
+}
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
+    background:#0099cc;
+}
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+    background: #33b5e5;
+    outline: 4px solid #c2e3ef;
+}
+.mCSB_scrollTools .mCSB_buttonUp,
+.mCSB_scrollTools .mCSB_buttonDown,
+.mCSB_scrollTools .mCSB_buttonLeft,
+.mCSB_scrollTools .mCSB_buttonRight{
+    background-image:url(mCSB_buttons.png);
+    background-repeat:no-repeat;
+    opacity:0.4;
+    filter:"alpha(opacity=40)"; -ms-filter:"alpha(opacity=40)"; /* old ie */
+}
+.mCSB_scrollTools .mCSB_buttonUp{
+    background-position:0 0;
+    /* 
+    sprites locations are 0 0/-16px 0/-32px 0/-48px 0 (light) and -80px 0/-96px 0/-112px 0/-128px 0 (dark) 
+    */
+}
+.mCSB_scrollTools .mCSB_buttonDown{
+    background-position:0 -20px;
+    /* 
+    sprites locations are 0 -20px/-16px -20px/-32px -20px/-48px -20px (light) and -80px -20px/-96px -20px/-112px -20px/-128px -20px (dark) 
+    */
+}
+.mCSB_scrollTools .mCSB_buttonLeft{
+    background-position:0 -40px;
+    /* 
+    sprites locations are 0 -40px/-20px -40px/-40px -40px/-60px -40px (light) and -80px -40px/-100px -40px/-120px -40px/-140px -40px (dark) 
+    */
+}
+.mCSB_scrollTools .mCSB_buttonRight{
+    background-position:0 -56px;
+    /* 
+    sprites locations are 0 -56px/-20px -56px/-40px -56px/-60px -56px (light) and -80px -56px/-100px -56px/-120px -56px/-140px -56px (dark) 
+    */
+}
+.mCSB_scrollTools .mCSB_buttonUp:hover,
+.mCSB_scrollTools .mCSB_buttonDown:hover,
+.mCSB_scrollTools .mCSB_buttonLeft:hover,
+.mCSB_scrollTools .mCSB_buttonRight:hover{
+    opacity:0.75;
+    filter:"alpha(opacity=75)"; -ms-filter:"alpha(opacity=75)"; /* old ie */
+}
+.mCSB_scrollTools .mCSB_buttonUp:active,
+.mCSB_scrollTools .mCSB_buttonDown:active,
+.mCSB_scrollTools .mCSB_buttonLeft:active,
+.mCSB_scrollTools .mCSB_buttonRight:active{
+    opacity:0.9;
+    filter:"alpha(opacity=90)"; -ms-filter:"alpha(opacity=90)"; /* old ie */
+}
+
+
+/* Roboto font */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Light'), local('Roboto-Light'), url(images/font/Roboto-Light.woff) format('woff');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Regular'), local('Roboto-Regular'), url(images/font/Roboto-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto Bold'), local('Roboto-Bold'), url(images/font/Roboto-Bold.woff) format('woff');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 300;
+    src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url(images/font/Roboto-LightItalic.woff) format('woff');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Roboto Italic'), local('Roboto-Italic'), url(images/font/Roboto-Italic.woff) format('woff');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url(images/font/Roboto-BoldItalic.woff) format('woff');
+}

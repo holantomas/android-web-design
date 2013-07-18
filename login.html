@@ -1,0 +1,128 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Příhlášení</title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+
+		<!-- Styly -->
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
+		<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
+
+		<!-- JavaScript -->
+		<script type="text/javascript" src="../APIs/lightbox/js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript">
+
+			function check_login(){
+
+				if(document.getElementById('log_login').value == 'Login'){ 
+
+					alert('Musíte zadat login.');
+					
+					return false;					
+
+				}; 
+				if(document.getElementById('log_pass').value == 'Heslo'){
+
+					alert('Musíte zadat heslo.');
+
+					return false;
+
+				};
+
+			};
+
+			function disable_button(){
+
+				if((document.getElementById('log_pass').value.lenght <= 3 || document.getElementById('log_pass').value == 'Heslo') || (document.getElementById('log_login').value.lenght <= 3 || document.getElementById('log_login').value == 'Login')){
+
+					document.getElementById('log_in_submit').disabled=true;
+
+					document.getElementById("log_in_submit").setAttribute("class", "disable");
+
+				}else{
+
+					document.getElementById('log_in_submit').disabled=false;
+
+					document.getElementById("log_in_submit").setAttribute("class", "submit");			
+				
+				};
+
+			};
+
+			function ieFallback(){
+				
+				if ($.browser.msie) {
+					return true;
+				}
+
+				return false;
+			  
+			}
+
+			$(document).ready(function(){
+				
+				if (!$.browser.msie){
+					$("#log_in_submit").click(function(event){
+					var login = $(":input").serializeArray();
+					
+				    $.ajax({
+			    		type: "POST",
+			    	  	url: "ajax/login.php",
+			    	  	data: login
+			    	}).done(function(vystup) {
+
+				    	if(vystup != ''){ 
+
+				    	  	$("#odpoved").html(vystup);
+				      		$("#odpoved").fadeIn(1000);
+
+				    	}else{
+
+				    		window.location.href = "index.php";
+
+					    }
+			    	});	
+
+					});
+
+				}
+			});
+
+		</script>
+	</head>
+	<body onLoad="disable_button();">
+				<div id="login">
+			<h1>Přihlásit se</h1>
+			<form method="post" onSubmit="return check_login();">
+				<table>
+					<tr>
+						<td><hr></td>
+					</tr>
+					<tr>
+						<td><input id="log_login" type="text" onKeyPress="disable_button();" onFocus="if (this.value=='Login') this.value='';" onblur="if (this.value=='') this.value='Login'; disable_button();" value="Login" name="login"></td>
+					</tr>
+					<tr>
+						<td><input id="log_pass" type="text" onKeyPress="disable_button();" onFocus="if (this.value=='Heslo') this.value=''; if (this.type=='text') this.type='password';" onblur=" if (this.value == '') this.type='text'; if (this.value=='') this.value='Heslo'; disable_button();"value="Heslo" name="pass"></td>
+					</tr>
+					<tr>
+						<td><input type="submit" onClick="return ieFallback();" id="log_in_submit" class="submit" name="prihlasit" value="Přihlásit se"></td>
+					</tr>
+					<tr>
+						<td id="odpoved">
+Nejste přihlášen(a) !						</td>
+					</tr>				
+				</table>
+			</form>
+		</div>
+	</body>
+</html>
+
